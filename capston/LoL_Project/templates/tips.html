@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Offcanvas navbar template · Bootstrap v5.1</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+
+    <!-- Bootstrap core CSS -->
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	  html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 56px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.border-bottom pb-2 mb-0{
+  float: left;
+}
+
+body{
+  background: url('https://ifh.cc/g/4DL5Sb.jpg');
+}
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+    <nav class="navbar navbar-fixed-top navbar-brand navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img id="ho" src="https://ifh.cc/g/3XhBnF.png" height="40" width="150"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recommendation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SEARCH</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+<main class="container">
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-dark rounded shadow-sm" >
+    <h1 class="h6 mb-0 text-white lh-1"><img id="ho" src="https://ifh.cc/g/3XhBnF.png"  height="30" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1> 
+    <input onkeyup="filter()" type="text" id="value" placeholder="Type to search" style="width:200px;height:30px;">
+       <button class="btn btn-outline-success" type="submit">Search</button>
+  </div>
+
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">Karma</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8  >
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/CQpeGIiyQOs" frameborder=”0″ allowfullscreen></iframe> 
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/O942SC9xNJ4" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/8fljkFCcVKo" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/j0VzqXuqo7Q" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+        <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Karma's Tip
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">ㅁ
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Karma's Tip</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Karma is very powerful in the bottom lane due to health/mana retention, and long-distance ability to attack the enemy. For Q skills, it is important to hit minions and enemy champions at the same time.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </small>
+  </div>
+
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">Annie</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8  >
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/LW9DGY-NSHw" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/35W6U_9syfg" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item”  src="https://www.youtube.com/embed/RBBIDGfDl5A" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/9UHUmDdlA7A" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+        <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Annie's Tip
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">ㅁ
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Annie's Tip</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Annie has a long range, so continuous attacks are important at the beginning. In addition, there is a powerful weapon called a confirmed cc, so it is necessary to actively call Jungler to win a kill.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </small>
+  </div>
+
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">Rumble</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8 >
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/HiT5aqobsqE" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/mUcGfOlTWUM" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/GHR_5JhNGs4" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/V5uk04QOtXY" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Rumble's Tip
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        말파이트당
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+      </small>
+  </div>
+  
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">Malpaite</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8 >
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/radq6PHC3Ds" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/geWO78R7XHk"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/SJ296neX6Ug" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/DefVyeorCxw" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  말파이트's 팁
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        말파이트당
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+      </small>
+  </div>
+
+
+  <div class="my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class=" border-bottom pb-2 mb-0 text-white">Ezreal</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8 >
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/WiXHpgq8gNw"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/nIpzyHRyw3s"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/WQ6o3p1aJlE"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/_D11HRWNt0A" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ezreal's Tip
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        말파이트당
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+      </small>
+  </div>
+
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">말파이트</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8 >
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/radq6PHC3Ds" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/geWO78R7XHk"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/SJ296neX6Ug" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/DefVyeorCxw" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  말파이트's 팁
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        말파이트당
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+      </small>
+  </div>
+
+
+  <div class="item my-3 p-3  rounded shadow-sm" style="background-color: #222529;">
+    <h6 class="name border-bottom pb-2 mb-0 text-white">말파이트</h6>
+    <div class=”embed-responsive embed-responsive-16by9“ col-md-8 >
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/radq6PHC3Ds" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/geWO78R7XHk"  frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/SJ296neX6Ug" frameborder=”0″ allowfullscreen></iframe>
+      <iframe class=”embed-responsive-item” src="https://www.youtube.com/embed/DefVyeorCxw" frameborder=”0″ allowfullscreen></iframe>
+      </div>
+      <small class="d-block text-end mt-3">
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  말파이트's 팁
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        말파이트당
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+      </small>
+  </div>
+</main>
+<script type="text/javascript">
+  function filter(){
+
+    var value, name, item, i;
+
+    value = document.getElementById("value").value.toUpperCase();
+    item = document.getElementsByClassName("item");
+
+    for(i=0;i<item.length;i++){
+      name = item[i].getElementsByClassName("name");
+      if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+        item[i].style.display = "flex";
+      }else{
+        item[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="offcanvas.js"></script>
+  </body>
+</html>

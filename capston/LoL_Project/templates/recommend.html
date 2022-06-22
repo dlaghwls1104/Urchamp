@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="/static/css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<head>
+  <style>
+    body {
+    margin: 0 auto;
+    padding-top: 70px;
+    background: #ddd;
+    min-height: 100vh;
+    vertical-align: middle;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold
+    
+}
+
+
+.title {
+    margin-bottom: 5vh
+}
+
+.card {
+    margin-left: 280px;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto
+    }
+}
+
+.cart {
+    height: 670px;
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
+   
+}
+
+@media(max-width:767px) {
+    .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem
+    }
+}
+
+.summary {
+    background-color: #ddd;
+ 
+    padding: 4vh;
+    color: #A0A0A0
+}
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem
+    }
+}
+
+.summary .col-2 {
+    padding: 0
+}
+
+.summary .col-10 {
+    padding: 0
+}
+
+.row {
+    width: auto;
+}
+
+.title b {
+    font-size: 1.5rem
+}
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+}
+
+.col-2,
+.col {
+    padding: 0 1vh
+}
+
+a {
+    padding: 0 1vh
+}
+
+.close {
+    margin-left: auto;
+    font-size: 0.7rem
+}
+
+img {
+    width: 3.5rem
+}
+
+.back-to-shop {
+    margin-top: 4.5rem
+}
+
+h5 {
+    margin-top: 4vh
+}
+
+hr {
+    margin-top: 1.25rem
+}
+
+form {
+    padding: 2vh 0
+}
+
+select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247)
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+.btn {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none
+}
+
+.btn:hover {
+    color: white
+}
+
+a {
+    color: black
+}
+
+a:hover {
+    color: black;
+    text-decoration: none
+}
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center
+}
+
+.lst_type {
+    width:610px;
+    border: 1px solid #888;
+    margin: 10px auto;
+    padding: 5px;
+    *zoom: 1;
+    height:450px;
+    overflow-y:scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+ 
+
+  .lst_type::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+  
+  .lst_type:after {
+    content: '';
+    display: block;
+    clear: both;
+   
+  }
+  
+  .lst_type li{
+    float: left;
+    width: 90px;
+    margin: 5px;
+  
+  
+  }
+  
+  
+  .lst_type li em {
+    display: block;
+    padding: 3px 0;
+    font-size: 11px;
+    letter-spacing: -1px;
+    line-height: 1.5;
+  }
+  .form-control{
+    display: inline-block;
+  }
+  .screen{
+      width: 1600px;
+  }
+ 
+  #list ul { background-color: #222529 ; list-style-type: none; padding: 0; overflow: hidden; }
+  #list li { float: left; width: 70px; }
+  #list li a { display: block; background-color: #222529; color: #A0A0A0;  padding: 10px; text-decoration: none;
+      text-align: center; font-weight: bold; font-size: 11px }
+  #list li a:hover { background-color: blue; color: white; }
+
+  body{
+    background: url('https://ifh.cc/g/4DL5Sb.jpg');
+  }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-brand navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img id="ho" src="https://ifh.cc/g/3XhBnF.png" ></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">챔피언 팁</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">전적 검색</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="screen">
+
+                 
+        <div class="col align-self-center card">
+
+        <div class="row" style="background-color: #222529;">
+            <div class="col-md-8 cart" style="background-color: #222529;">
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h4><b>Champion List</b></h4>
+                        </div>
+                        <div class="col align-self-center text-right text-muted">Drag Champion</div>
+                    </div>
+                </div>
+                <div class="row"style="background-color: #222529;" >
+                    <div class="row main align-items-center" >
+                      <div id="list">
+                        <nav class="nav" >
+                          <ul class="menu" >
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">JUNGLE</a></li>
+                            <li><a href="#">MID</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">SUPPORT</a></li>
+                            <li><input onkeyup="filter()" type="text" id="value" placeholder="Search"></li>
+                          </ul>
+                        </nav>
+                     </div>
+                        <ul class="lst_type" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: #222529;">
+                        <li class="item"><img id="Aatrox" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Aatrox.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Aatrox</em></li>
+                        <li class="item"><img id="Ahri" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ahri.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ahri</em></li>
+                        <li class="item"><img id="Akali" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Akali.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Akali</em></li>
+                        <li class="item"><img id="Alistar" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Alistar.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Alistar</em></li>
+                        <li class="item"><img id="Amumu" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Amumu.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Amumu</em></li>
+                        <li class="item"><img id="Anivia" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Anivia.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Anivia</em></li>
+                        <li class="item"><img id="Annie" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Annie.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Annie</em></li>
+                        <li class="item"><img id="Aphelios" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Aphelios.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Aphelios</em></li>
+                        <li class="item"><img id="Ashe" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ashe.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ashe</em></li>
+                        <li class="item"><img id="AurelionSol" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/AurelionSol.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">AurelionSol</em></li>
+                        <li class="item"><img id="Azir" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Azir.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Azir</em></li>
+                        <li class="item"><img id="Bard" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Bard.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Bard</em></li>
+                        <li class="item"><img id="Blitzcrank" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Blitzcrank.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Blitzcrank</em></li>
+                        <li class="item"><img id="Brand" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Brand.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Brand</em></li>
+                        <li class="item"><img id="Braum" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Braum.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Braum</em></li>
+                        <li class="item"><img id="Caitlyn" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Caitlyn.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Caitlyn</em></li>
+                        <li class="item"><img id="Camille" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Camille.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Camille</em></li>
+                        <li class="item"><img id="Cassiopeia" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Cassiopeia.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Cassiopeia</em></li>
+                        <li class="item"><img id="Chogath" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Chogath.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Chogath</em></li>
+                        <li class="item"><img id="Corki" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Corki.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Corki</em></li>
+                        <li class="item"><img id="Darius" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Darius.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Darius</em></li>
+                        <li class="item"><img id="Diana" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Diana.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Diana</em></li>
+                        <li class="item"><img id="Draven" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Draven.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Draven</em></li>
+                        <li class="item"><img id="DrMundo" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/DrMundo.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">DrMundo</em></li>
+                        <li class="item"><img id="Ekko" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ekko.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ekko</em></li>
+                        <li class="item"><img id="Elise" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Elise.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Elise</em></li>
+                        <li class="item"><img id="Evelynn" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Evelynn.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Evelynn</em></li>
+                        <li class="item"><img id="Ezreal" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ezreal.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ezreal</em></li>
+                        <li class="item"><img id="Fiddlesticks" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Fiddlesticks.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name"em style="color:aliceblue">Fiddlesticks</em></li>
+                        <li class="item"><img id="Fiora" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Fiora.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Fiora</em></li>
+                        <li class="item"><img id="Fizz" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Fizz.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Fizz</em></li>
+                        <li class="item"><img id="Galio" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Galio.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Galio</em></li>
+                        <li class="item"><img id="Gangplank" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Gangplank.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Gangplank</em></li>
+                        <li class="item"><img id="Garen" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Garen.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Garen</em></li>
+                        <li class="item"><img id="Gnar" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Gnar.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Gnar</em></li>
+                        <li class="item"><img id="Gragas" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Gragas.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Gragas</em></li>
+                        <li class="item"><img id="Graves" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Graves.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Graves</em></li>
+                        <li class="item"><img id="Hecarim" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Hecarim.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Hecarim</em></li>
+                        <li class="item"><img id="Heimerdinger" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Heimerdinger.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Heimerdinger</em></li>
+                        <li class="item"><img id="Illaoi" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Illaoi.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Illaoi</em></li>
+                        <li class="item"><img id="Irelia" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Irelia.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Irelia</em></li>
+                        <li class="item"><img id="Ivern" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ivern.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ivern</em></li>
+                        <li class="item"><img id="Janna" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Janna.png" draggable="true" ondragstart="drag(event)" width="300"/><eem class="name"m style="color:aliceblue">Janna</em></li>
+                        <li class="item"><img id="JarvanIV" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/JarvanIV.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">JarvanIV</em></li>
+                        <li class="item"><img id="Jax" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Jax.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Jax</em></li>
+                        <li class="item"><img id="Jayce" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Jayce.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Jayce</em></li>
+                        <li class="item"><img id="Jhin" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Jhin.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Jhin</em></li>
+                        <li class="item"><img id="Jinx" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Jinx.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Jinx</em></li>
+                        <li class="item"><img id="Kaisa" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kaisa.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kaisa</em></li>
+                        <li class="item"><img id="Kalista" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kalista.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kalista</em></li>
+                        <li class="item"><img id="Karma" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Karma.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Karma</em></li>
+                        <li class="item"><img id="Karthus" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Karthus.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Karthus</em></li>
+                        <li class="item"><img id="Kassadin" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kassadin.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kassadin</em></li>
+                        <li class="item"><img id="Katarina" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Katarina.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Katarina</em></li>
+                        <li class="item"><img id="Kayle" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kayle.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kayle</em></li>
+                        <li class="item"><img id="Kayn" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kayn.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kayn</em></li>
+                        <li class="item"><img id="Kennen" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kennen.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kennen</em></li>
+                        <li class="item"><img id="Khazix" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Khazix.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Khazix</em></li>
+                        <li class="item"><img id="Kindred" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kindred.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kindred</em></li>
+                        <li class="item"><img id="Kled" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Kled.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Kled</em></li>
+                        <li class="item"><img id="KogMaw" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/KogMaw.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">KogMaw</em></li>
+                        <li class="item"><img id="Leblanc" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Leblanc.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Leblanc</em></li>
+                        <li class="item"><img id="LeeSin" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/LeeSin.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">LeeSin</em></li>
+                        <li class="item"><img id="Leona" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Leona.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Leona</em></li>
+                        <li class="item"><img id="Lissandra" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Lissandra.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Lissandra</em></li>
+                        <li class="item"><img id="Lucian" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Lucian.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Lucian</em></li>
+                        <li class="item"><img id="Lulu" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Lulu.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Lulu</em></li>
+                        <li class="item"><img id="Lux" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Lux.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Lux</em></li>
+                        <li class="item"><img id="Malphite" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Malphite.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Malphite</em></li>
+                        <li class="item"><img id="Malzahar" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Malzahar.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Malzahar</em></li>
+                        <li class="item"><img id="Maokai" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Maokai.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Maokai</em></li>
+                        <li class="item"><img id="MasterYi" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/MasterYi.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">MasterYi</em></li>
+                        <li class="item"><img id="MissFortune" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/MissFortune.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">MissFortune</em></li>
+                        <li class="item"><img id="MonkeyKing" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/MonkeyKing.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">MonkeyKing</em></li>
+                        <li class="item"><img id="Mordekaiser" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Mordekaiser.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Mordekaiser</em></li>
+                        <li class="item"><img id="Morgana" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Morgana.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Morgana</em></li>
+                        <li class="item"><img id="Nami" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nami.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nami</em></li>
+                        <li class="item"><img id="Nasus" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nasus.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nasus</em></li>
+                        <li class="item"><img id="Nautilus" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nautilus.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nautilus</em></li>
+                        <li class="item"><img id="Neeko" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Neeko.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Neeko</em></li>
+                        <li class="item"><img id="Nidalee" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nidalee.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nidalee</em></li>
+                        <li class="item"><img id="Nocturne" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nocturne.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nocturne</em></li>
+                        <li class="item"><img id="Nunu" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Nunu.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Nunu</em></li>
+                        <li class="item"><img id="Olaf" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Olaf.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Olaf</em></li>
+                        <li class="item"><img id="Orianna" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Orianna.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Orianna</em></li>
+                        <li class="item"><img id="Ornn" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ornn.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ornn</em></li>
+                        <li class="item"><img id="Pantheon" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Pantheon.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Pantheon</em></li>
+                        <li class="item"><img id="Poppy" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Poppy.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Poppy</em></li>
+                        <li class="item"><img id="Pyke" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Pyke.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Pyke</em></li>
+                        <li class="item"><img id="Qiyana" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Qiyana.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Qiyana</em></li>
+                        <li class="item"><img id="Quinn" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Quinn.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Quinn</em></li>
+                        <li class="item"><img id="Rakan" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Rakan.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Rakan</em></li>
+                        <li class="item"><img id="Rammus" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Rammus.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Rammus</em></li>
+                        <li class="item"><img id="RekSai" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/RekSai.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">RekSai</em></li>
+                        <li class="item"><img id="Renekton" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Renekton.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Renekton</em></li>
+                        <li class="item"><img id="Rengar" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Rengar.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Rengar</em></li>
+                        <li class="item"><img id="Riven" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Riven.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Riven</em></li>
+                        <li class="item"><img id="Rumble" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Rumble.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Rumble</em></li>
+                        <li class="item"><img id="Ryze" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ryze.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ryze</em></li>
+                        <li class="item"><img id="Sejuani" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sejuani.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sejuani</em></li>
+                        <li class="item"><img id="Senna" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Senna.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Senna</em></li>
+                        <li class="item"><img id="Sett" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sett.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sett</em></li>
+                        <li class="item"><img id="Shaco" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Shaco.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Shaco</em></li>
+                        <li class="item"><img id="Shen" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Shen.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Shen</em></li>
+                        <li class="item"><img id="Shyvana" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Shyvana.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Shyvana</em></li>
+                        <li class="item"><img id="Singed" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Singed.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Singed</em></li>
+                        <li class="item"><img id="Sion" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sion.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sion</em></li>
+                        <li class="item"><img id="Sivir" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sivir.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sivir</em></li>
+                        <li class="item"><img id="Skarner" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Skarner.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Skarner</em></li>
+                        <li class="item"><img id="Sona" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sona.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sona</em></li>
+                        <li class="item"><img id="Soraka" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Soraka.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Soraka</em></li>
+                        <li class="item"><img id="Swain" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Swain.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Swain</em></li>
+                        <li class="item"><img id="Sylas" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Sylas.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Sylas</em></li>
+                        <li class="item"><img id="Syndra" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Syndra.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Syndra</em></li>
+                        <li class="item"><img id="TahmKench" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/TahmKench.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">TahmKench</em></li>
+                        <li class="item"><img id="Taliyah" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Taliyah.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Taliyah</em></li>
+                        <li class="item"><img id="Talon" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Talon.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Talon</em></li>
+                        <li class="item"><img id="Taric" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Taric.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Taric</em></li>
+                        <li class="item"><img id="Teemo" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Teemo.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Teemo</em></li>
+                        <li class="item"><img id="Thresh" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Thresh.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Thresh</em></li>
+                        <li class="item"><img id="Tristana" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Tristana.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name"em style="color:aliceblue">Tristana</em></li>
+                        <li class="item"><img id="Trundle" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Trundle.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Trundle</em></li>
+                        <li class="item"><img id="Tryndamere" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Tryndamere.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Tryndamere</em></li>
+                        <li class="item"><img id="TwistedFate" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/TwistedFate.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">TwistedFate</em></li>
+                        <li class="item"><img id="Twitch" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Twitch.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Twitch</em></li>
+                        <li class="item"><img id="Udyr" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Udyr.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Udyr</em></li>
+                        <li class="item"><img id="Urgot" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Urgot.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Urgot</em></li>
+                        <li class="item"><img id="Varus" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Varus.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Varus</em></li>
+                        <li class="item"><img id="Vayne" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Vayne.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Vayne</em></li>
+                        <li class="item"><img id="Veigar" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Veigar.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Veigar</em></li>
+                        <li class="item"><img id="Velkoz" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Velkoz.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Velkoz</em></li>
+                        <li class="item"><img id="Vi" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Vi.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Vi</em></li>
+                        <li class="item"><img id="Viktor" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Viktor.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Viktor</em></li>
+                        <li class="item"><img id="Vladimir" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Vladimir.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Vladimir</em></li>
+                        <li class="item"><img id="Volibear" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Volibear.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Volibear</em></li>
+                        <li class="item"><img id="Warwick" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Warwick.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Warwick</em></li>
+                        <li class="item"><img id="Xayah" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Xayah.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Xayah</em></li>
+                        <li class="item"><img id="Xerath" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Xerath.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Xerath</em></li>
+                        <li class="item"><img id="XinZhao" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/XinZhao.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">XinZhao</em></li>
+                        <li class="item"><img id="Yasuo" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Yasuo.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Yasuo</em></li>
+                        <li class="item"><img id="Yorick" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Yorick.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Yorick</em></li>
+                        <li class="item"><img id="Yuumi" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Yuumi.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Yuumi</em></li>
+                        <li class="item"><img id="Zac" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Zac.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Zac</em></li>
+                        <li class="item"><img id="Zed" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Zed.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Zed</em></li>
+                        <li class="item"><img id="Ziggs" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Ziggs.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Ziggs</em></li>
+                        <li class="item"><img id="Zilean" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Zilean.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Zilean</em></li>
+                        <li class="item"><img id="Zoe" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Zoe.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Zoe</em></li>
+                        <li class="item"><img id="Zyra" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Zyra.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Zyra</em></li>
+                        <li class="item"><img id="Lillia" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Lillia.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Lillia</em></li>
+                        <li class="item"><img id="Yone" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Yone.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Yone</em></li>
+                        <li class="item"><img id="Samira" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Samira.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Samira</em></li>
+                        <li class="item"><img id="Seraphine" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Seraphine.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Seraphine</em></li>
+                        <li class="item"><img id="Rell" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Rell.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Rell</em></li>
+                        <li class="item"><img id="Viego" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Viego.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Viego</em></li>
+                        <li class="item"><img id="Gwen" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Gwen.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Gwen</em></li>
+                        <li class="item"><img id="Akshan" src="http://ddragon.leagueoflegends.com/cdn/11.16.1/img/champion/Akshan.png" draggable="true" ondragstart="drag(event)" width="300"/><em class="name" style="color:aliceblue">Akshan</em></li>
+                        
+                      </ul>
+                      <div class="back-to-shop" style="background-color: #222529;"><a href="http://127.0.0.1:5000/">&leftarrow;</a><span class="text-muted">Back to HOME</span></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+
+       
+            <div class="col-md-4 summary" style="background-color: #222529;">
+                <div>
+                    <h5><b>Summary</b></h5>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">Champion Analysis</div>
+                    
+                </div>
+                <form action = "http://127.0.0.1:5000/result" method = "POST">
+                  <div class="form-group">
+                   
+                    <p>PICK NUMBER</p>
+                    <input type="radio" style="width:20px;height:15px;" name="pick" id="pick" value="1"> 1 &nbsp; &nbsp; </input>
+                    <input type="radio" style="width:20px;height:15px;" name="pick" id="pick" value="2"> 2 &nbsp; &nbsp;</input>
+                    <input type="radio" style="width:20px;height:15px;" name="pick" id="pick" value="3"> 3 &nbsp; &nbsp;</input>
+                    <input type="radio" style="width:20px;height:15px;" name="pick" id="pick" value="4"> 4 &nbsp; &nbsp;</input>
+                    <input type="radio" style="width:20px;height:15px;" name="pick" id="pick" value="5"> 5 &nbsp; &nbsp;</input>
+                    
+                  </div>
+
+         
+
+
+                  <div class="form-group">
+                    <p>TEAM</p>
+                    
+                    <input type="radio" style="width:20px;height:15px; " name="team" id="team" value="blue" style="color: blue;"> BLUE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</input>
+                    <input type="radio" style="width:20px;height:15px;" name="team" id="team" value="red" style="color: red;"> RED </input>
+                  </div>
+
+                  <div class="form-group">
+                    <p>POSITION</p>
+                    <input type="radio" style="width:20px;height:15px;"  name="position" id="position" value="top"> TOP </input>
+                    <input type="radio" style="width:20px;height:15px;" name="position" id="position" value="jungle"> JG </input>
+                    <input type="radio" style="width:20px;height:15px;" name="position" id="position" value="mid"> MID </input>
+                    <input type="radio" style="width:20px;height:15px;" name="position" id="position" value="bottom"> AD </input>
+                    <input type="radio" style="width:20px;height:15px;" name="position" id="position" value="sup"> SUP </input>
+                  </div>
+                
+                  <p>BlUE TEAM</p> 
+                  <input type="text"  name="bluecham1"  class="form-control" placeholder="1" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="bluecham2" class="form-control" placeholder="2" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="bluecham3" class="form-control" placeholder="3" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="bluecham4" class="form-control" placeholder="4" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <p>RED TEAM</p> 
+                  <input type="text"  name="redcham1" class="form-control" placeholder="1" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="redcham2" class="form-control" placeholder="2" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="redcham3" class="form-control" placeholder="3" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+                  <input type="text"  name="redcham4" class="form-control" placeholder="4" style=width:100px; height="50px" ondrop="drop(event)" ondragover="allowDrop(event)">
+             
+                  <button type="submit" class="btn btn-primary ">
+                    챔피언 분석
+                  </button>
+
+                
+                </form>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</main>
+</body>
+
+
+<script type="text/javascript">
+  function filter(){
+
+    var value, name, item, i;
+
+    value = document.getElementById("value").value.toUpperCase();
+    item = document.getElementsByClassName("item");
+
+    for(i=0;i<item.length;i++){
+      name = item[i].getElementsByClassName("name");
+      if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+        item[i].style.display = "flex";
+      }else{
+        item[i].style.display = "none";
+      }
+    }
+  }
+</script>
