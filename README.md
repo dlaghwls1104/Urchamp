@@ -5,5 +5,5 @@
 [Urchamp.pptx](https://github.com/dlaghwls1104/Urchamp/files/8960019/Capston.pptx)
 
 
-[시연영상보러가기]("https://user-images.githubusercontent.com/43700551/175432727-a915fea7-3cb4-4ee3-bf97-48c049154237.mp4")
+[![시연영상보러가기](http://img.youtube.com/vi/QYNwbZHmh8g/0.jpg)](https://user-images.githubusercontent.com/43700551/175432727-a915fea7-3cb4-4ee3-bf97-48c049154237.mp4) 
 
